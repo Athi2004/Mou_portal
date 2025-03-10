@@ -1,0 +1,57 @@
+/* Dark Mode Styles */
+body {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text color */
+}
+
+.header-content {
+    background-color: #1e1e1e; /* Darker header background */
+    padding: 10px;
+}
+
+h1, h2, h3 {
+    color: #ffffff; /* Light color for headings */
+}
+
+input[type="text"], 
+input[type="checkbox"], 
+button {
+    background-color: #333333; /* Dark input background */
+    color: #ffffff; /* Light input text */
+    border: 1px solid #444444; /* Dark border */
+}
+
+button {
+    background-color: blue; /* Blue button background */
+}
+
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444444; /* Lighter button on hover */
+}
+
+.table {
+    background-color: #1e1e1e; /* Dark table background */
+}
+
+.modal-content {
+    background-color: #1e1e1e; /* Dark modal background */
+    color: #ffffff; /* Light modal text */
+}
+
+h1, h2, h3, p, label {
+    color: #ffffff; /* Light color for all text elements */
+}
+
+
+.close {
+    color: #ffffff; /* Light close button */
+}
+
+.close:hover {
+    color: #ff0000; /* Red close button on hover */
+}

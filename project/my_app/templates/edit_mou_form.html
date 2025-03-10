@@ -1,0 +1,66 @@
+{% csrf_token %}
+{{ form.as_p }}
+<script>
+    const subDepartmentOptions = {
+        'Department': [
+            { value: 'N/A', text: 'Not Applicable' },
+            { value: 'BM', text: 'Biomedical Engineering' },
+            { value: 'CE', text: 'Civil Engineering' },
+            { value: 'CSD', text: 'Computer Science & Design' },
+            { value: 'CSE', text: 'Computer Science & Engineering' },
+            { value: 'EEE', text: 'Electrical & Electronics Engineering' },
+            { value: 'ECE', text: 'Electronics & Communication Engineering' },
+            { value: 'EIE', text: 'Electronics & Instrumentation Engineering' },
+            { value: 'ISE', text: 'Information Science & Engineering' },
+            { value: 'ME', text: 'Mechanical Engineering' },
+            { value: 'MC', text: 'Mechatronics Engineering' },
+            { value: 'AG', text: 'Agricultural Engineering' },
+            { value: 'AIDS', text: 'Artificial Intelligence and Data Science' },
+            { value: 'AIML', text: 'Artificial Intelligence and Machine Learning' },
+            { value: 'BT', text: 'Biotechnology' },
+            { value: 'CSBS', text: 'Computer Science & Business Systems' },
+            { value: 'CT', text: 'Computer Technology' },
+            { value: 'FT', text: 'Food Technology' },
+            { value: 'FT', text: 'Fashion Technology' },
+            { value: 'IT', text: 'Information Technology' },
+            { value: 'TT', text: 'Textile Technology' },
+        ],
+        'College': [
+            { value: 'N/A', text: 'Not Applicable' },
+        ],
+        'Industry': [
+            { value: 'N/A', text: 'Not Applicable' },
+        ],
+    };
+
+    function updateSubDepartmentOptions() {
+        const categoryField = document.querySelector('[name="category"]');
+        const subDepartmentField = document.querySelector('[name="sub_department"]');
+        const selectedCategory = categoryField.value;
+        const options = subDepartmentOptions[selectedCategory] || [{ value: 'N/A', text: 'Not Applicable' }];
+
+        subDepartmentField.innerHTML = '';
+        options.forEach(option => {
+            const opt = document.createElement('option');
+            opt.value = option.value;
+            opt.text = option.text;
+            subDepartmentField.add(opt);
+        });
+    }
+
+    function validateDates() {
+        const startDate = document.querySelector('[name="start_date"]').value;
+        const endDate = document.querySelector('[name="end_date"]').value;
+
+        if (new Date(startDate) >= new Date(endDate)) {
+            alert("End date must be greater than start date.");
+            return false;
+        }
+        return true;
+    }
+
+    // Initialize sub-department options on page load
+    window.onload = function() {
+        updateSubDepartmentOptions();
+    };
+</script>

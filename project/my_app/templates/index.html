@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOU Portal</title>
+    {% load static %}
+<link rel="stylesheet" href="{% static 'index.css' %}">
+{% load static %}
+    <script src="{% static 'script.js' %}"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>MOU Portal</h1>
+            <div class="theme-toggle">
+                <label for="toggle">🌙</label>
+                <input type="checkbox" id="toggle" onchange="toggleTheme()">
+                <label for="toggle">☀️</label>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <h2>Welcome back, Admin!</h2>
+            <p>Manage your MOUs efficiently.</p>
+        </section>
+
+        <section class="dashboard">
+            <div class="dashboard-card">
+                <h3>Create MOU</h3>
+                <p>Use this option to create new MOUs.</p>
+                <a href="{% url 'create_mou' %}" class="btn">Go to Create MOU</a>
+            </div>
+            <div class="dashboard-card">
+                <h3>View MOUs</h3>
+                <p>Use this option to view existing MOUs.</p>
+                <a href="{% url 'view_mou' %}" class="btn">Go to View MOUs</a>
+            </div>
+        </section>
+        <section class="contact">
+            <h3>For Any Support</h3>
+            <p >If you have any queries, please contact us at <a href="mailto:athish.al22@bitsathy.ac.in" class="mail">athish.al22@bitsathy.ac.in.</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 MOU Tracking Portal</p>
+    </footer>
+    
+</body>
+</html>

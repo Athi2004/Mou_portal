@@ -1,0 +1,121 @@
+/* Base Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #f9f9f9; /* Light background */
+    color: #333; /* Light text color */
+}
+
+header {
+    background-color: #6fc6d9;
+    color: white;
+    padding: 20px 0px;
+    text-align: center;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.theme-toggle label {
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #fff; /* White background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    color: #333; /* Default color for light mode */
+}
+
+.btn {
+    display: inline-block;
+    background-color:  #6fc6d9; /* Green */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color:  #6fc6d9; /* Darker Green */
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #6fc6d9; /* Same as header */
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Dark Theme Styles */
+body.dark-theme {
+    background-color: #2c2c2c; /* Dark background */
+    color: #f9f9f9; /* Light text color */
+}
+
+body.dark-theme header {
+    background-color: #3b3b3b; /* Darker header */
+}
+
+body.dark-theme section {
+    background-color: #444; /* Dark section background */
+    border-color: #666; /* Darker border */
+}
+
+body.dark-theme h1, 
+body.dark-theme h2, 
+body.dark-theme h3 {
+    color: #f9f9f9; /* Change all headers to white */
+}
+
+body.dark-theme .btn {
+    background-color: #007BFF; /* Blue */
+}
+
+body.dark-theme .btn:hover {
+    background-color: #0056b3; /* Darker Blue */
+}
+
+body.dark-theme footer {
+    background-color: #3b3b3b; /* Darker footer */
+}
+
+/* Ensure all text is visible in dark mode */
+body.dark-theme p, 
+body.dark-theme a, 
+body.dark-theme .mail {
+    color: #f9f9f9; /* Change paragraph and link text to white */
+}

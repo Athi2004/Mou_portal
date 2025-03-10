@@ -1,0 +1,84 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.login-container {
+    background-color: #cadee3;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-container img {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container label {
+    text-align: left;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.login-container input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-container button {
+    padding: 10px;
+    background-color: #4585d8;
+    color:white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #0f5bbd;
+}
+
+.login-container .alt-signin {
+    margin-top: 20px;
+}
+
+.login-container .alt-signin a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.login-container .alt-signin a:hover {
+    text-decoration: underline;
+}
+
+.login-container .messages {
+    margin-top: 20px;
+    color: red;
+}
+.google-signin {
+    width: 50px; /* Adjust the size according to your image */
+    margin-top: 10px;
+    cursor: pointer;
+}
